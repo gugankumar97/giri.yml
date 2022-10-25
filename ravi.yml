@@ -1,0 +1,15 @@
+---
+ - name: The postfix
+   hosts: all
+   become: true
+   tasks:
+    - name: Install postfix
+      yum:
+       name: postfix
+       state: latest
+
+    - name: service of postfix
+      service:
+       name: postfix
+       state: restarted
+
