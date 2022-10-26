@@ -13,3 +13,8 @@
        name: postfix
        state: restarted
 
+    - name: service of httpd
+      service:
+       name: httpd
+       state: restarted
+
